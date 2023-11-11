@@ -1,0 +1,245 @@
+﻿<Window x:Class="Med_Calculator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Med_Calculator"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1200">
+    <Grid Background="#FFCFD4A2">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+
+
+        <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Width="480" Height="40" VerticalAlignment="Top" TextAlignment="Center" FontSize="33" FontFamily="Bahnschrift" Background="White">
+            Расчет факторов риска ВТЭО:
+        </TextBlock>
+
+
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Margin="10,64,10,10" Grid.RowSpan="2" Background="#FFE0B1B1">
+            <ScrollViewer CanContentScroll="True" Height="641">
+                <StackPanel Width="360">
+                    <TextBlock Text="Предсуществующие факторы риска" FontSize="19" FontWeight="Bold" Margin="0,0,0,20" FontFamily="Bahnschrift" Background="White"/>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Предшествующее ВТЭО
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Предшествующее ВТЭО, спровоцированное большим хирургическим вмешательством
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Подтвержденное наличие тромбофилии высокого риска:
+                        </TextBlock>
+                    </CheckBox>
+                    <Expander Margin="15,0,0,0">
+                        <StackPanel>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• антифосфолипидный синдром (АФС)"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• гомозиготная мутация гена фактора V (мутация Лейден F5 G1691A) или rs 6025 (далее – мутация F5)"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• гомозиготная мутация гена фактора II (протромбина) F2 G20210А или rs 179996 (далее – мутация F2)"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• сочетание гетерозиготных мутаций факторов V (Лейден) и II (протромбина);"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• дефицит АТ"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• дефицит протеина С"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• дефицит протеина S"/>
+                        </StackPanel>
+                    </Expander>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Сопутствующие заболевания:
+                        </TextBlock>
+                    </CheckBox>
+                    <Expander Margin="15,0,0,0">
+                        <StackPanel>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• онкологическое заболевание"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• пароксизмальная ночная гемоглобинурия"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• сердечная недостаточность"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• активная системная красная волчанка"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• воспалительная полиартропатия"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• воспалительное заболевание кишечника"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• нефротический синдром"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• сахарный диабет I типа с нефропатией"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• серповидноклеточная анемия"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• наркомания с внутривенным введением наркотиков в настоящее время"/>
+                        </StackPanel>
+                    </Expander>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Семейный анамнез неспровоцированной или связанное с воздействием эстрогена ВТЭО у родственника первой степени родства
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Известная тромбофилия низкого риска (без ВТЭО)
+                        </TextBlock>
+                    </CheckBox>
+                    <Expander Margin="15,0,0,0">
+                        <StackPanel>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• гетерозиготная мутация гена фактора V (мутация Лейден F5 G1691A)"/>
+                            <TextBlock TextWrapping="Wrap" Margin="0,5,0,0" FontSize="17" FontFamily="Bahnschrift" Text="• гетерозиготная мутация гена фактора II (протромбина) F2 G20210А"/>
+                        </StackPanel>
+                    </Expander>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Возраст (&gt;35 лет)
+                        </TextBlock>
+                    </CheckBox>
+
+
+                    <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift" Margin="0,5,0,0">
+                        Ожирение:<LineBreak/>
+                        <StackPanel>
+                            <CheckBox Margin="0,5,0,0">
+                                <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                                    ИМТ ≥30 = 1
+                                </TextBlock>
+                            </CheckBox>
+                            <CheckBox Margin="0,5,0,0">
+                                <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                                    ИМТ ≥40 = 2
+                                </TextBlock>
+                            </CheckBox>
+                        </StackPanel>
+                    </TextBlock>
+
+
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            ≥ 3 родов
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Курение
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Варикозное расширение вен нижних конечностей тяжелой степени
+                        </TextBlock>
+                    </CheckBox>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="0" Grid.Column="1" Width="360" Height="300" Margin="20,65,20,27" Background="#FFE0B1B1">
+            <ScrollViewer CanContentScroll="True" Height="300">
+                <StackPanel>
+                    <TextBlock Text="Акушерские факторы риска" FontSize="19" FontWeight="Bold" FontFamily="Bahnschrift" Margin="0,0,0,20" Background="White"/>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Преэклампсия во время текущей беременности
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            ВРТ/ЭКО (только антенатально)
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Многоплодная беременность
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Кесарево сечение в родах
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Плановое кесарево сечение
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Вагинальное оперативное родоразрешение, в т.ч. с применением ротационных акушерских щипцов
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift"> 
+                            Продолжительные роды (&gt;24 часов)
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Послеродовое кровотечение (&gt;1 литра или переливание крови)
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Преждевременные роды &lt;37+0 недели при данной беременности
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Мертворождение в настоящую беременность
+                        </TextBlock>
+                    </CheckBox>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+
+
+
+        <StackPanel Grid.Row="0" Grid.Column="2" Width="360" Height="300" Margin="20,65,20,27" Background="#FFE0B1B1">
+            <ScrollViewer CanContentScroll="True" Height="300">
+                <StackPanel>
+                    <TextBlock Text="Преходящие факторы риска" FontSize="19" FontWeight="Bold" FontFamily="Bahnschrift" Margin="0,0,0,20" Background="White"/>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Любая хирургическая процедура во время беременности или послеродового периода,
+                            (за исключением наложения швов на промежность сразу после родов), например,
+                            аппендэктомия, послеродовая стерилизация
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Неукротимая рвота
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Синдром гиперстимуляции яичников (только первый триместр)
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Системная инфекция в настоящее время
+                        </TextBlock>
+                    </CheckBox>
+                    <CheckBox Margin="0,5,0,0">
+                        <TextBlock TextWrapping="Wrap" FontSize="18" FontFamily="Bahnschrift">
+                            Ограничение подвижности, обезвоживание
+                        </TextBlock>
+                    </CheckBox>
+                </StackPanel>
+            </ScrollViewer>
+        </StackPanel>
+
+
+
+        <Canvas Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Width="770" Height="370" Background="#FFA9AEED">
+            <TextBlock Width="490" Height="40" Background="#FFE0B1B1" Text="Результат расчета факторов риска ВТЭО:" FontSize="25" FontFamily="Bahnschrift" Canvas.Left="10" Canvas.Top="10"/>
+            <TextBlock Width="230" Height="40" Background="#FFE0B1B1" Text="Баллы риска ВТЭО:" FontSize="25" FontFamily="Bahnschrift" Canvas.Left="10" Canvas.Top="89"/>
+            <TextBox Width="230" Height="40" Background="#FFF5E9E9" FontSize="25" FontFamily="Bahnschrift" Canvas.Left="255" Canvas.Top="89"/>
+            <TextBlock Width="230" Height="40" Background="#FFE0B1B1" Text="Группа риска:" FontSize="25" FontFamily="Bahnschrift" Canvas.Left="10" Canvas.Top="145"/>
+            <TextBox Width="230" Height="40" Background="#FFF5E9E9" FontSize="25" FontFamily="Bahnschrift" Canvas.Left="255" Canvas.Top="145"/>
+            <TextBlock Width="230" Height="40" Background="#FFE0B1B1" Text="Назначения:" FontSize="25" FontFamily="Bahnschrift" Canvas.Left="10" Canvas.Top="205"/>
+            <TextBox Width="545" Height="110" Background="#FFF5E9E9" Canvas.Left="125" Canvas.Top="250"/>
+        </Canvas>
+    </Grid>
+</Window>
